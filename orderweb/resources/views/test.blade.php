@@ -1,4 +1,4 @@
-@include('templates.base')
+@extends('templates.base')
 @section('title','test')
 @section('content')
     <h1>Test</h1>
