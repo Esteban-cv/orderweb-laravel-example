@@ -10,10 +10,22 @@ class Order extends Model
     use HasFactory;
     protected $table = 'order';
     protected $fillable = [
-        'legalization_data',
+        'legalization_date',
         'address',
         'city',
         'observation_id',
         'causal_id'
     ];
+
+    public function causal(){
+        return $this->belongsTo(Causal::class, 'causal_id');
+    }
+
+    public function observation(){
+        return $this->belongsTo(Observation::class, 'observation_id');
+    }
+
+    public function activities(){
+        return $this->belongsToMany(Activity::class);
+    }
 }

@@ -17,7 +17,7 @@ class ObservationSeeder extends Seeder
             ['description' => 'Perro bravo'],
             ['description' => 'Contador con candado'],
             ['description' => 'Contador inaccesible'],
-            ['description' => 'Predio en construcción'],
+            ['description' => 'Predio en construccion'],
             ['description' => 'No existe contador']
         ]);
     }

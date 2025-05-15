@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Observation;
 use App\Models\Technician;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -20,28 +21,36 @@ class DatabaseSeeder extends Seeder
         $this->call(ObservationSeeder::class);
         $this->call(TypeActivitySeeder::class);
 
-        //create 1 user rol admin
+        //Crear usuario del rol admin
         User::factory()->create([
             'role_id' => 1
         ]);
 
-        //create 3 users rol super
+        //Crear 3 usuarios de rol super
         User::factory(3)->create([
             'role_id' => 2
         ]);
 
-        //technicians
+        //tecnicos
         Technician::factory(2)->create([
             'speciality' => 'Instalación de redes'
         ]);
+
         Technician::factory(2)->create([
             'speciality' => 'Construcción'
         ]);
+
         Technician::factory(1)->create([
             'speciality' => 'Lectura de redes'
         ]);
-        Technician::factory(1)->create(); // técnico sin especialidad
+
+        Technician::factory(2)->create();  //Tecnico sin especialidad
 
         $this->call(ActivitySeeder::class);
+        //Seeders test
+        //$this->call(TestTechnicianSeeder::class);
+
+        $this->call(TestActivitySeeder::class);
+
     }
 }

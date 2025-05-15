@@ -8,11 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 class Activity extends Model
 {
     use HasFactory;
-    protected $table = 'activity';
+    protected $table = 'Activity';
     protected $fillable = [
         'description',
         'hours',
         'technician_id',
-        'type_activity_id'  
+        'type_activity_id'
     ];
+
+    public function technician(){
+        return $this->belongsTo(Technician::class, 'technician_id'); // BelongsTo por que tiene FK
+    }
+
+    public function type_activity(){
+        return $this->belongsTo(TypeActivity::class, 'type_activity_id'); 
+    }
+
+    public function orders(){
+        return $this->belongsToMany(Order::class);
+    }
 }
