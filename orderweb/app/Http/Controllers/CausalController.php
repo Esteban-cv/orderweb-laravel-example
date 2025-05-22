@@ -65,7 +65,7 @@ class CausalController extends Controller
             session()->flash('message', 'El registro se actualizo correctamente');
         }
         else {
-            session()->flash('error', 'No se encontró el registro');
+            session()->flash('error', 'Ha ocurrido un problema al actualizar la causal');
         }
         return redirect()->route('causal.index');
     }
@@ -80,7 +80,7 @@ class CausalController extends Controller
             session()->flash('message', 'El registro se elimino correctamente');
         }
         else {
-            session()->flash('error', 'No se encontró el registro');
+            session()->flash('error', 'Ha ocurrido un problema al eliminar la causal');
         }
         return redirect()->route('causal.index');
     }
