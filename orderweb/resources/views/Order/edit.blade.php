@@ -76,9 +76,37 @@
                             <div class="row form-group">
                                 <div class="col-lg-6">
                                     <label for="table_data" class="font-weight-bold text-primary m-0">Actividades disponibles</label>
+                                    <table id="table_data" class="table table-striped table-hover">
+                                        <thead>
+                                            <th>Id</th>
+                                            <th>Descripción</th>
+                                            <th>Horas</th>
+                                            <th>Agregar</th>
+                                        </thead>
+                                        <tbody>
+                                            <td>1</td>
+                                            <td>prueba</td>
+                                            <td>a</td>
+                                            <td>x</td>
+                                        </tbody>
+                                    </table>
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="table_data" class="font-weight-bold text-primary m-0">Actividades agregadas</label>
+                                    <table id="table_data" class="table table-striped table-hover">
+                                        <thead>
+                                            <th>Id</th>
+                                            <th>Descripción</th>
+                                            <th>Horas</th>
+                                            <th>Retirar</th>
+                                        </thead>
+                                        <tbody>
+                                            <td>1</td>
+                                            <td>prueba</td>
+                                            <td>a</td>
+                                            <td>x</td>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

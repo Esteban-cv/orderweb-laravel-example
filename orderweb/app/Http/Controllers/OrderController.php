@@ -6,6 +6,7 @@ use App\Models\Causal;
 use App\Models\Observation;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -61,6 +62,10 @@ class OrderController extends Controller
                 ['name' => 'BUGA', 'value' => 'BUGA'],
                 ['name' => 'PALMIRA', 'value' => 'PALMIRA']
             ];
+
+            //CONSULTAR ACTIVIDADES DISPONIBLES
+            $query = DB::select('SELECT * FROM activity where activity.id NOT IN (SELECT order_activity.activity_id FROM order_activity WHERE order_activity.order_id = ?)', [$id]);
+
             return view('order.edit',compact('order','causals','observations','cities'));
         }
         else {

@@ -21,10 +21,10 @@
                     <div class="col-lg-6 mb-4">
                         <label for="city">Ciudad</label>
                         <select name="city" id="technician_id" class="form-control">
-                            <option value="tulua">TULUÁ</option>
-                            <option value="cali">CALI</option>
-                            <option value="buga">BUGA</option>
-                            <option value="palmira">PALMIRA</option>
+                            <option value="TULUÁ">TULUÁ</option>
+                            <option value="CALI">CALI</option>
+                            <option value="BUGA">BUGA</option>
+                            <option value="PALMIRA">PALMIRA</option>
                         </select>
                     </div>
                     <div class="col-lg-6 mb-4">
@@ -65,7 +65,7 @@
             <div class="row">
                 <div class="col-lg-12 mb-4">
                     <div class="alert alert-warning" role="alert">
-                        <i class="fa-soli fa-lightbuld"></i>Para añadir actividades a la orden, primero debe crearla y luego dar click en la accion editar.
+                        <i class="fa-soli fa-lightbuld"></i>Para añadir actividades a la orden, primero debe crearla y luego dar click en la acción editar.
                     </div>
 
                 </div>
