@@ -2,7 +2,7 @@
 @section('title', 'Editar orden')
 @section('header', 'Editar orden')
 @section('content')
-    @include('templates/messages')
+    @include('templates.messages')
     <div class="row">
         <div class="col-lg-12 mb-4">
             <form action="{{ route('order.update', $order) }}" method="POST">

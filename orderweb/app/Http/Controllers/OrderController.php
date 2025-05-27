@@ -123,12 +123,12 @@ class OrderController extends Controller
         $order = Order::find($order_id);
         if(!$order){
             session()->flash('error','No se encuentra la orden');
-            return redirect()->route('order.edit',$order_id)->widthInput();
+            return redirect()->route('order.edit',$order_id)->withInput();
         }
         $activity = Activity::find($activity_id);
         if(!$activity){
             session()->flash('error','No se encuentra la actividad');
-            return redirect()->route('order.edit',$order_id)->widthInput();
+            return redirect()->route('order.edit',$order_id)->withInput();
         }
 
         // GUARDAR LA ACTIVIDAD EN ORDER_ACTIVITY
