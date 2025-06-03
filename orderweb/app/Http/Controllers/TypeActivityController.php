@@ -10,11 +10,11 @@ class TypeActivityController extends Controller
 {
 
     private $rules = [
-        'description' => 'required|string|min:3|max:100'
+        'description' => 'required|string|min:3|max:100',
     ];
 
     private $traductionAttributes = [
-        'description' => 'descripción'
+        'description' => 'descripción',
     ];
 
     /**
