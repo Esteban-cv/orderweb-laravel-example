@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CausalController;
 use App\Http\Controllers\ObservationController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TechnicianController;
 use App\Http\Controllers\TypeActivityController;
 use Illuminate\Support\Facades\Route;
@@ -110,4 +111,9 @@ Route::middleware(['auth', 'can:supervisor'])->prefix('technician')->group(funct
     Route::post('/store',[TechnicianController::class, 'store'])->name('technician.store');
     Route::put('/update/{id}',[TechnicianController::class,'update'])->name('technician.update');
     Route::get('/destroy/{id}',[TechnicianController::class, 'destroy'])->name('technician.destroy');    
+});
+
+Route::middleware(['auth', 'can:administrador'])->prefix('reports')->group(function(){
+    Route::get('/index',[ReportController::class, 'index'])->name('reports.index');
+    Route::get('/report_technicians',[ReportController::class, 'report_technicians'])->name('reports.technicians');
 });
