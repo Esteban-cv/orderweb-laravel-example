@@ -48,4 +48,33 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <div class="card shadow">
+                <div class="card-header py-3">
+                    <h5 class="m-0 font-weight-bold text-primary">Reporte ordenes por fecha</h5>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('reports.orders_by_date') }}" method="POST">
+                        @csrf
+                        <div class="row form-group">
+                            <div class="col-lg-4">
+                                <label for="legalization_date">Fecha inicio</label>
+                                <input type="date" name="start_date" id="start_date" class="form-control" required>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="legalization_date">Fecha Finalización</label>
+                                <input type="date" name="end_date" id="end_date" class="form-control" required>
+                            </div>
+                            <div class="col-lg-4">
+                                <button type="submit" class="btn btn-primary btn-block col-lg-4" title="PDF">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
