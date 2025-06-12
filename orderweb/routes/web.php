@@ -119,6 +119,7 @@ Route::middleware(['auth', 'can:administrador'])->prefix('reports')->group(funct
     Route::get('/report_technicians',[ReportController::class, 'export_technicians'])->name('reports.technicians');
     Route::post('/export_activities_by_technician',[ReportController::class, 'export_activities_by_technician'])->name('reports.activities_technician');
     Route::post('/export_orders_by_date',[ReportController::class, 'export_orders_by_date'])->name('reports.orders_by_date');
+
 });
 
 Route::middleware(['auth', 'can:administrador'])->prefix('users')->group(function(){
